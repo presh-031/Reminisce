@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const Note = require("../models/Note");
 
 module.exports = {
@@ -59,4 +60,3 @@ module.exports = {
     }
   },
 };
-const Note = require("../models/Note");
