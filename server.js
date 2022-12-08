@@ -9,8 +9,8 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 
 // routes imports
-const mainRoutes = require("./routes/main");
-const todoRoutes = require("./routes/todos");
+// const mainRoutes = require("./routes/main");
+// const todoRoutes = require("./routes/todos");
 
 require("dotenv").config({ path: "./config/.env" });
 
@@ -42,8 +42,9 @@ app.use(flash());
 
 // routes setup
 app.use("/", mainRoutes);
-app.use("/todos", todoRoutes);
+// app.use("/todos", todoRoutes);
 
-app.listen(process.env.PORT || 4000, () => {
-  console.log("Server is running, you better catch it!");
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server is running, you better catch it on port ${PORT}`);
 });
