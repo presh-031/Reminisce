@@ -3,14 +3,13 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/header.ejs') %>
-    <p>Login</p>
     <!-- email and password fields only -->
-    <main>
-      <p>Log in</p>
-      <form action="#">
-        <input type="email" name="" id="" />
-        <input type="password" name="" id="" />
-        <button>Log in</button>
+    <main class="mx-12 mt-16">
+      <p class="mb-8 text-3xl">Sign in</p>
+      <form action="#" class="">
+        <input type="email" placeholder="Email" name="" id="" class="block w-full px-4 py-2 outline" />
+        <input type="password" placeholder="Password" name="" id="" class="mt-8 block w-full px-4 py-2 outline" />
+        <button type="submit" class="mt12 mt-8 block w-full bg-[#46d7ff] py-2 text-white">Sign in</button>
       </form>
       <div class="my-8 flex items-center gap-4">
         <div class="w-full border-b-[1px] border-gray-800"></div>
@@ -19,5 +18,6 @@
       </div>
       <p>New to Reminisce ? <a href="/signup" class="hover:underline">Join now</a></p>
     </main>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>
