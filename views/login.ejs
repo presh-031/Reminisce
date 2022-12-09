@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+  <%- include('./partials/head.ejs') %>
   <body>
+    <%- include('./partials/header.ejs') %>
     <p>Login</p>
     <!-- email and password fields only -->
+    <main>
+      <p>Log in</p>
+      <form action="#">
+        <input type="email" name="" id="" />
+        <input type="password" name="" id="" />
+        <button>Log in</button>
+      </form>
+      <div class="my-8 flex items-center gap-4">
+        <div class="w-full border-b-[1px] border-gray-800"></div>
+        <p>or</p>
+        <div class="w-full border-b-[1px] border-gray-800"></div>
+      </div>
+      <p>New to Reminisce ? <a href="/signup" class="hover:underline">Join now</a></p>
+    </main>
   </body>
 </html>
