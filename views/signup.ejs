@@ -3,11 +3,18 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/header.ejs') %>
-    <main class="mx-12 outline">
-      <p class="text-3xl">Join Reminisce</p>
+    <main class="mx-12 mt-16 outline">
+      <p class="mb-8 text-3xl">Join Reminisce</p>
       <form action="#" class="border border-red-800">
-        <input type="email" placeholder="Email" name="" id="" class="outline block" />
-        <input type="password" placeholder="Password (8+ characters)" min="8" name="" id="" class="outline block" />
+        <input type="email" placeholder="Email" name="" id="" class="block w-full px-4 py-2 outline" />
+        <input
+          type="password"
+          placeholder="Password (8+ characters)"
+          min="8"
+          name=""
+          id=""
+          class="block w-full px-4 py-2 outline"
+        />
         <button type="submit" class="block">Join</button>
       </form>
       <div>
