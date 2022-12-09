@@ -3,26 +3,28 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/header.ejs') %>
-    <main class="mx-12 mt-16 outline">
+    <main class="mx-12 mt-16">
       <p class="mb-8 text-3xl">Join Reminisce</p>
-      <form action="#" class="border border-red-800">
+      <form action="#" class="">
         <input type="email" placeholder="Email" name="" id="" class="block w-full px-4 py-2 outline" />
+        <input type="text" placeholder="Username" name="" id="" class="mt-8 block w-full px-4 py-2 outline" />
         <input
           type="password"
           placeholder="Password (8+ characters)"
           min="8"
           name=""
           id=""
-          class="block w-full px-4 py-2 outline"
+          class="mt-8 block w-full px-4 py-2 outline"
         />
-        <button type="submit" class="block">Join</button>
+        <button type="submit" class="mt12 mt-8 block w-full bg-[#46d7ff] py-2 text-white">Join</button>
       </form>
-      <div>
-        <div></div>
+      <div class="my-8 flex items-center gap-4">
+        <div class="w-full border-b-[1px] border-gray-800"></div>
         <p>or</p>
-        <div></div>
+        <div class="w-full border-b-[1px] border-gray-800"></div>
       </div>
-      <p>Already on Reminisce ? <a href="">Log in</a></p>
+      <p>Already on Reminisce ? <a href="" class="hover:underline">Log in</a></p>
     </main>
+    <!-- footer gets included below -->
   </body>
 </html>
