@@ -7,7 +7,7 @@ module.exports = {
     try {
       const noteItems = await Note.find({ userId: req.user.id });
       const itemsLeft = await Note.countDocuments({ userId: req.user.id, completed: false });
-      res.render("notes.ejs", { notes: noteItems, left: itemsLeft, user: req.user });
+      res.render("notes.ejs", { notes: noteItems, left: itemsLeft, user: req.user, title: "Your Notes" });
     } catch (err) {
       console.log(err);
     }
