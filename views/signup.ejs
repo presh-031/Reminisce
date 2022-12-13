@@ -3,17 +3,36 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/header.ejs') %>
-    <main class="mx-12 mt-16">
+
+    <!-- error messages -->
+    <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+    <div class="alert alert-danger"><%= el.msg %></div>
+    <% }) %> <% } %>
+    <!-- signup form -->
+    <main class="mx-12 my-16">
       <p class="mb-8 text-3xl">Join Reminisce</p>
-      <form action="#" class="">
-        <input type="email" placeholder="Email" name="" id="" class="block w-full px-4 py-2 outline" />
-        <input type="text" placeholder="Username" name="" id="" class="mt-8 block w-full px-4 py-2 outline" />
+      <form action="/signup" method="POST">
+        <input type="email" placeholder="Email" name="email" id="email" class="block w-full px-4 py-2 outline" />
+        <input
+          type="text"
+          placeholder="Username"
+          name="userName"
+          id="userName"
+          class="mt-8 block w-full px-4 py-2 outline"
+        />
         <input
           type="password"
           placeholder="Password (8+ characters)"
           min="8"
-          name=""
-          id=""
+          name="password"
+          id="password"
+          class="mt-8 block w-full px-4 py-2 outline"
+        />
+        <input
+          type="password"
+          name="confirmPassword"
+          min="8"
+          placeholder="Confirm Password"
           class="mt-8 block w-full px-4 py-2 outline"
         />
         <button type="submit" class="mt12 mt-8 block w-full bg-[#46d7ff] py-2 text-white">Join</button>
@@ -23,7 +42,7 @@
         <p>or</p>
         <div class="w-full border-b-[1px] border-gray-800"></div>
       </div>
-      <p>Already on Reminisce ? <a href="" class="hover:underline">Log in</a></p>
+      <p>Already on Reminisce ? <a href="/login" class="hover:underline">Log in</a></p>
     </main>
     <!-- footer gets included below -->
     <%- include('./partials/footer.ejs') %>

@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('./partials/head.ejs') %>
+
   <body>
-    <%- include('./partials/header.ejs') %> <%- include('./partials/footer.ejs') %>
+    <header class="flex items-center justify-between gap-4 bg-black p-4">
+      <p class="text-4xl font-semibold text-[#46d7ff]">Reminisce</p>
+      <p class="text-xl text-white"><a href="/signup">Signup</a></p>
+    </header>
+
+    <main class="mx-4 mb-16">
+      <p class="mt-16 text-center text-xl font-semibold">NOTE YOUR IDEAS ON THE FLY</p>
+      <p class="mt-12 text-center text-5xl font-medium">More than just a note taking app</p>
+      <p class="mt-8 mb-4 text-center"><a href="/signup" class="hover:underline">Sign Up</a></p>
+      <hr />
+      <p class="mt-4 text-center">Already a user? <a href="/login" class="hover:underline">Log in</a></p>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>

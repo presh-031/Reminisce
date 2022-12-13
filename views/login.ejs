@@ -3,12 +3,26 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/header.ejs') %>
+
+    <!-- error messages -->
+
+    <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+    <div class="text-red-800"><%= el.msg %></div>
+    <% }) %> <% } %> <% if (locals.messages.info) { %> <% messages.info.forEach( el => { %>
+    <div class="text-red-800"><%= el.msg %></div>
+    <% }) %> <% } %>
     <!-- email and password fields only -->
     <main class="mx-12 mt-16">
-      <p class="mb-8 text-3xl">Sign in</p>
-      <form action="#" class="">
-        <input type="email" placeholder="Email" name="" id="" class="block w-full px-4 py-2 outline" />
-        <input type="password" placeholder="Password" name="" id="" class="mt-8 block w-full px-4 py-2 outline" />
+      <p class="mb-8 text-3xl">Log in</p>
+      <form action="/login" method="POST" class="">
+        <input type="email" placeholder="Email" name="email" id="email" class="block w-full px-4 py-2 outline" />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="password"
+          class="mt-8 block w-full px-4 py-2 outline"
+        />
         <button type="submit" class="mt12 mt-8 block w-full bg-[#46d7ff] py-2 text-white">Sign in</button>
       </form>
       <div class="my-8 flex items-center gap-4">
